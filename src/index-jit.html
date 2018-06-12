@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <base href="/">
+    <title>Sistema Eventos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/fonte.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="http://arquivos.weblibras.com.br/auto/wl-min.js"></script>
+    <script>
+       var wl = new WebLibras({
+          compatibilityMode: true
+       });
+	   
+			   (function () {
+			var Contrast = {
+				storage: 'contrastState',
+				cssClass: 'contrast',
+				currentState: null,
+				check: checkContrast,
+				getState: getContrastState,
+				setState: setContrastState,
+				toogle: toogleContrast,
+				updateView: updateViewContrast
+			};
+
+			window.toggleContrast = function () { Contrast.toogle(); };
+
+			Contrast.check();
+
+			function checkContrast() {
+				this.updateView();
+			}
+
+			function getContrastState() {
+				return localStorage.getItem(this.storage) === 'true';
+			}
+
+			function setContrastState(state) {
+				localStorage.setItem(this.storage, '' + state);
+				this.currentState = state;
+				this.updateView();
+			}
+
+			function updateViewContrast() {
+				var body = document.body;
+
+				if (this.currentState === null)
+					this.currentState = this.getState();
+
+				if (this.currentState)
+					body.classList.add(this.cssClass);
+				else
+					body.classList.remove(this.cssClass);
+			}
+
+			function toogleContrast() {
+				this.setState(!this.currentState);
+			}
+		})();
+	 
+			function fonte(e) {
+
+			var elemento = $(".acessibilidade");
+			var fonte = parseInt(elemento.css('font-size'));
+			
+			e == 'a' ? fonte++ : fonte--;
+
+			elemento.css("fontSize", fonte);
+			
+		}
+	 
+    </script>
+	
+	<script src="main.js"></script>
+	
+	<link rel="stylesheet" href="./contrast.css">
+
+</head>
+
+<body>
+    <my-app>Aguarde, carregando...</my-app>
+</body>
+
+</html>

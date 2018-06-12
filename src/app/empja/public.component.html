@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse  navbar-toggleable-md " style="background-color:#1C2331;margin-top:0px;">
+        <div class="collapse navbar-collapse" id="containerNavbar" style="background-color:#1C2331">
+            <ul class="navbar-nav mr-auto no-wlauto">
+                <li class="nav-item no-wlauto" routerLinkActive="active" >
+                    <a class="nav-link no-wlauto" routerLink="/" >Home</a>
+                </li>
+				
+            </ul>
+        </div>
+		<div class="collapse navbar-collapse" id="containerNavbar" style="background-color:#1C2331;font-size:20px;font-weight:900;">
+			<ul class="navbar-nav mr-auto no-wlauto">
+				<li class="nav-item no-wlauto" routerLinkActive="active"><a  class="nav-link no-wlauto" href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" style="color:#40E0D0">Alto contraste</a></li>
+			</ul>
+		</div>
+		<!--<div class="collapse navbar-collapse" id="containerNavbar" style="background-color:#1C2331; ">
+            <ul class="navbar-nav mr-auto no-wlauto">
+                <li class="nav-item no-wlauto" style="display:inline-block">
+                    <button  type="button" class="btn btn-warning" onClick="fonte('a');" style="position:fixed;display:inline-block">Aumentar ++</button>
+                </li>
+				<li class="nav-item no-wlauto">
+                    <button	 type="button" class="btn btn-warning" onClick="fonte('d');" style="position:fixed;display:inline-block">Diminuir -</button>
+                </li>
+            </ul>
+        </div>-->
+		<button  type="button" class="btn btn-warning" onClick="fonte('a');" style="position: fixed;top: 80px;left: 1290px;">++</button>
+
+		<button	 type="button" class="btn btn-warning" onClick="fonte('d');" style="position: fixed;top: 130px;left: 1290px;">- -</button>
+        
+</nav>
+<script src="fonte.js"></script>
+
+<div class="container" >  
+    <router-outlet></router-outlet>
+</div>
+

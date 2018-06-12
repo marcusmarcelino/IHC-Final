@@ -1,0 +1,98 @@
+<div class="container">
+	<div>
+		<h1>Cadastro</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">Nome Completo</label>
+					<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:400px">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="pontuacao">Data de nascimento, neste formato("##/##/####")</label>
+					<input type="text" name="data" maxlength="10" OnKeyPress="formatar('##/##/####', this)" class="form-control" [(ngModel)]="artigo.titulo" style="width:200px">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="pontuacao">CPF, neste formato("###.###.###-##")</label>
+					<input type="text" name="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" [(ngModel)]="artigo.situacao" style="width:200px">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">Email</label>
+					<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:400px">
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">Rua</label>
+					<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:300px">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">Numero</label>
+					<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:100px">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="titulo">Bairro</label>
+			<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:400px">
+		</div>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">Telefone</label>
+					<input type="text" name="tel" maxlength="12" OnKeyPress="formatar('##-9####-####', this)" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:200px">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="titulo">CEP</label>
+					<input type="text" name="cep" maxlength="9" OnKeyPress="formatar('#####-###', this)" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:200px">
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="titulo">Escolaridade</label>
+			<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:400px">
+		</div>
+		<div>
+			<label for="titulo">Possui alguma deficiência?</label>
+			<div class="radio">
+				<label>
+					<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."><span>Sim</span>
+				</label>
+			</div>
+			<br>
+			<div class="radio">
+				<label>
+					<input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."><span>Não</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="titulo">Que tipo de deficiência?</label>
+			<input type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="100" style="width:400px">
+		</div>
+		<div class="form-group">
+			<label for="titulo">Cursos capacitativos ja concluidos</label>
+			<textarea type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="1000" style="width:100%"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="titulo">Experiência Profissional</label>
+			<textarea type="text" name="titulo" class="form-control" [(ngModel)]="artigo.titulo" maxlength="1000" style="width:100%"></textarea>
+		</div>
+		<button  class="btn btn-success" (click)="salvar(); formCadastro.reset()">Salvar</button><!---->
+		<button class="btn btn-danger"(click)="telaArtigo()">Cancelar</button>
+</div>
